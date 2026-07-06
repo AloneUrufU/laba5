@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeCinema</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="banner">
+        <div class="logo">
+            <img src="images/logo/HomeCinema-logo-transparent.png" alt="HomeCinema Logo" class="logo-image">
+        </div>
+
+        <div class="menu">
+            <div class="menu-item">
+                <a href="index.html" class="menu_link">Головна</a>
+                <a href="about.html" class="menu_link">Про нас</a>
+                <a href="#" class="menu_link_now">Розклад</a>
+                <a href="contacts.html " class="menu_link">Контакти</a>
+            </div>
+            <button class="button" type="button"><p class="button_text">Купити Квиток</p></button>
+            <div class="search">
+                <input type="text" class="search_input" placeholder="">
+                <button class="search_button" type="button" aria-label="Search">
+                    <svg class="search_icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C8.01 14 6 11.99 6 9.5S8.01 5 10.5 5 15 7.01 15 9.5 12.99 14 10.5 14z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero_section">
+        <h1 class="hero_section_title2">Розклад сеансів</h1>
+
+        <h2 class="hero_text2">Актуальний розклад на сьогодні та найближчі дні</h2>
+    </section>
+
+    <section class="search_panel_section">
+        <div class="filter_panel">
+            <div class="filter_day">
+                <div class="filter_day_text">
+                    <p>День</p>
+                </div>
+
+                <div class="filter_day_date">
+                    <p>01</p>
+                </div>
+            </div>
+
+            <div class="filter_month">
+                <div class="filter_month_text">
+                    <p>Місяць</p>
+                </div>
+
+                <div class="filter_month_date">
+                    <p>01</p>
+                </div>
+            </div>
+
+            <div class="filter_year">
+                <div class="filter_year_text">
+                    <p>Рік</p>
+                </div>
+
+                <div class="filter_year_date">
+                    <p>2026</p>
+                </div>
+            </div>
+
+            <div class="filter_ganre">
+                <div class="filter_ganre_text">
+                    <p>Жанр</p>
+                </div>
+
+                <div class="filter_ganre_choice">
+                    <p>...</p>
+                </div>
+            </div>
+
+            <div class="filter_room">
+                <div class="filter_room_text">
+                    <p>Зал</p>
+                </div>
+
+                <div class="filter_room_number">
+                    <p>...</p>
+                </div>
+            </div>
+        </div>
+
+        <button class="clear_button" type="button"><p class="button_text">Очистити фільтр</p></button>
+    </section>
+
+    <section class="schedule_section">
+        <article class="at_cinema_article">
+            <img src="images/заставки/Аватар1.jfif" alt="At Cinema Фільм 1" class="at_cinema_item_image">
+            <div class="at_cinema_item_shadow">
+                <div class="at_cinema_item_text">
+                    <p class="at_cinema_item_name">Назва: Аватар</p>
+                    <p class="at_cinema_item_genres">Жанри: Наукова фантастика, Бойовик, Пригоди, Драма</p>
+                    <p>Часи сеансів:</p>
+                    <ul>
+                        <li class="no_marks">10:00 – 12:00 — Ранковий сеанс</li>
+                        <li class="no_marks">13:00 – 15:00 — Денний сеанс</li>
+                        <li class="no_marks">16:30 – 18:30 — Вечірній сеанс</li>
+                        <li class="no_marks">19:30 – 21:30 — Пізній сеанс </li>
+                    </ul>
+                </div>
+
+                <button class="button" type="button"><p class="button_text">Купити Квиток</p></button>
+            </div>
+        </article>
+
+        <article class="at_cinema_article">
+            <img src="images/заставки/аватар2.jfif" alt="At Cinema Фільм 1" class="at_cinema_item_image">
+            <div class="at_cinema_item_shadow">
+                <div class="at_cinema_item_text">
+                    <p class="at_cinema_item_name">Назва: Аватар</p>
+                    <p class="at_cinema_item_genres">Жанри: Наукова фантастика, Бойовик, Пригоди, Драма</p>
+                    <p>Часи сеансів:</p>
+                    <ul>
+                        <li class="no_marks">11:00 – 14:00 — Перший показ</li>
+                        <li class="no_marks">14:45 – 17:45 — Другий показ</li>
+                        <li class="no_marks">18:30 – 21:30 — Головний вечірній показ</li>
+                    </ul>
+                </div>
+
+                <button class="button" type="button"><p class="button_text">Купити Квиток</p></button>
+            </div>
+        </article>
+    </section>
+
+    <footer class="footer_section">
+        <div class="footer_tittle">
+            <h1 class="footer_tittle_text">Сучасний кінотеатр у Вознесенську</h1>
+        </div>
+
+        <div class="footer_info">
+            <article class="footer_article">
+                <h2 class="footer_article_tittle1">Контакти</h2>
+                <p class="footer_article_text1">Адреса: <br> м. Вознесенськ, вул. Центральна, 15</p>
+                <p class="footer_article_text1">Телефон: <br> +38 (051) 234-56-78</p>
+                <p class="footer_article_text1">Email: <br> info@homecinema.Ua</p>
+            </article>
+
+            <article class="footer_article">
+                <h2 class="footer_article_tittle2">Графік</h2>
+                <p class="footer_article_text2">Понеділок – Четвер: <br> 10:00 – 23:00 <br> П’ятниця – Неділя: <br> 09:00 – 01:00</p>
+            </article>
+        </div>
+    </footer>
+</body>
+</html>
