@@ -1,0 +1,932 @@
+/* #region fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  font-family: 'Inter', sans-serif;
+  --color-bg: #611818;
+  --color-bg-dark: #000000;
+  --color-bg-card: #2A0001;
+  --color-bg-button: #702828;
+  --color-accent: #CDE329;
+  --color-accent-2: #67FF38;
+  --color-text: #FFFFFF;
+  --color-link: #C0C074;
+  --color-link-active: #FF383C;
+  --color-button-alt: #C3D255;
+  --color-button-hover: #A7FFE4;
+  --radius: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+.filmName,
+.subTittle,
+.mainText,
+.smallText,
+.buttonText {
+  margin: 0;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 41.8px;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 35.2px;
+
+  color: #CDE329;
+
+  text-align: center;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 31.2px;
+  
+  color: #CDE329;
+
+  text-align: center;
+}
+
+.filmName {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 26.4px;
+
+  color: #CDE329;
+
+  text-align: center;
+}
+
+.subTittle {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 26px;
+
+  color: #FFFFFF;
+
+  text-align: center;
+}
+
+.mainText {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22.5px;
+}
+
+.smallText {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19.6px;
+  
+  color: #CDE329;
+  
+  text-align: center;
+}
+
+.buttonText {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22.4px;
+}
+
+@media (min-width: 360px) and (max-width: 374px) {
+  h1 {
+    font-size: 38px;
+    line-height: 41.8px;
+  }
+
+  h2 {
+    font-size: 32px;
+    line-height: 35.2px;
+  }
+
+  h3 {
+    font-size: 26px;
+    line-height: 31.2px;
+  }
+
+  .filmName {
+    font-size: 22px;
+    line-height: 26.4px;
+  }
+
+  .subTittle {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .mainText {
+    font-size: 15px;
+    line-height: 22.5px;
+  }
+
+  .smallText {
+    font-size: 14px;
+    line-height: 19.6px;
+
+    text-align: center;
+
+    color: #CDE329;
+  }
+
+  .buttonText {
+    font-size: 16px;
+    line-height: 22.4px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 413px) {
+  h1 {
+    font-size: 40px;
+    line-height: 44px;
+  }
+
+  h2 {
+    font-size: 34px;
+    line-height: 37.4px;
+  }
+
+  h3 {
+    font-size: 27px;
+    line-height: 32.4px;
+  }
+
+  .filmName {
+    font-size: 23px;
+    line-height: 27.6px;
+  }
+
+  .subTittle {
+    font-size: 21px;
+    line-height: 27.3px;
+  }
+
+  .mainText {
+    font-size: 15px;
+    line-height: 22.5px;
+  }
+
+  .smallText {
+    font-size: 14px;
+    line-height: 19.6px;
+  }
+
+  .buttonText {
+    font-size: 16px;
+    line-height: 22.4px;
+  }
+}
+
+@media (min-width: 414px) {
+  h1 {
+    font-size: 44px;
+    line-height: 48.4px;
+  }
+
+  h2 {
+    font-size: 37px;
+    line-height: 30.7px;
+  }
+
+  h3 {
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  .filmName {
+    font-size: 25px;
+    line-height: 30px;
+  }
+
+  .subTittle {
+    font-size: 23px;
+    line-height: 29.9px;
+  }
+
+  .mainText {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .smallText {
+    font-size: 15px;
+    line-height: 21px;
+  }
+
+  .buttonText {
+    font-size: 17px;
+    line-height: 23.8px;
+  }
+}
+/* #endregion */
+
+body {
+    width: 100%;
+    max-width: 414px;
+    height: auto;
+    gap: 10px;
+
+    margin: 0px;
+    padding: 0px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+
+    background-color: var(--color-bg);
+}
+
+header {
+    width: 100%;
+    height: auto;
+    gap: 0px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+
+    border-radius: var(--radius);
+
+    background-color: var(--color-bg-dark);
+}
+
+.logo {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: var(--radius);
+
+    background-color: var(--color-bg-dark);
+}
+
+.menu {
+    width: 100%;
+    gap: 0;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    border-radius: var(--radius);
+
+    background-color: var(--color-bg-card);
+}
+
+.menuNav {
+    width: 100%;
+    height: auto;
+    gap: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.row1 {
+    width: 100%;
+    height: auto;
+    gap: 10px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.row2 {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.menuLinkNow,
+.menuLink {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    text-decoration: none;
+}
+
+.menuLinkNow {
+    color: var(--color-link-active);
+}
+
+.menuLink {
+    color: var(--color-link);
+}
+
+.search+buy {
+    width: 100%;
+    height: auto;
+    gap: 0px;
+}
+
+.buy {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonBuy,
+.buttonSchedule,
+.buttonActualSchedule {
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonBuy {
+    color: var(--color-accent);
+    background-color: var(--color-bg-button);
+}
+
+.buttonBuy:active {
+    color: var(--color-button-hover);
+}
+
+.search {
+    width: 100%;
+    height: auto;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.searchBar {
+    width: 200px;
+    height: 40px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.searchInput {
+    width: 100%;
+    height: 100%;
+
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.searchButton {
+    position: absolute;
+    top:50%;
+    right: 0px;
+    transform: translateY(-50%);
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(to bottom, #F1F1F1 50%, #E04D4D 100%);
+    cursor: pointer;
+}
+
+.searchIcon {
+    width: 40px;
+    height: 40px;
+}
+
+.searchButton:active {
+    background: linear-gradient(to bottom, #F1F1F1 20%, #E04D4D 100%);
+}
+
+.hero_section,
+.Our_advantages,
+.why_section,
+.Our_team_section,
+.new_guests_section,
+.at_cinema_section,
+.info_section,
+.footer_section {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero_section {
+    gap: 30px;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    background-image: url(images/herosection1.jfif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.heroTittle {
+    width: 100%;
+    height: auto;
+
+    color: #67FF38;
+    text-align: center;
+}
+
+.subTittle {
+    width: 100%;
+    height: auto;
+
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.buttonSchedule {
+    background: linear-gradient(to right, #933533 2%, #913434 27%, #A73C3C 60%, #411717 100%);
+    color: var(--color-button-alt);
+}
+
+.buttonSchedule:active {
+    background: linear-gradient(to right, #933535 2%, #913434 10%, #A73C3C 25%, #4C1B1B 58%, #411717 100%);
+    color: var(--color-button-hover);
+}
+
+.Our_advantages {
+    gap: 12px;
+    padding: 16px 0 20px;
+}
+
+.Our_advantages .scrollbarContent {
+    align-items: stretch;
+    gap: 0px;
+}
+
+.Our_advantages .empty,
+.Our_advantages .card {
+    flex-shrink: 0;
+}
+
+.Our_advantages .empty {
+    width: 60px;
+}
+
+.Our_advantages .card {
+    width: 240px;
+    height: 269px;
+    gap: 0px;
+    padding: 0;
+    border-radius: 0;
+    background-color: #000000;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.Our_advantages .card h3 {
+    color: #CDE329;
+    text-align: center;
+}
+
+.Our_advantages .card .smallText {
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.why_section {
+    gap: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.Our_team_section {
+    gap: 12px;
+    padding: 16px 0 24px;
+}
+
+.teamCards {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0 5px;
+}
+
+.teamCardInteractive {
+    width: 100%;
+    min-height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    touch-action: manipulation;
+}
+
+.teamImageBlock,
+.teamInfoBlock {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.teamImageBlock {
+    display: flex;
+}
+
+.teamImage {
+    width: 100%;
+    height: 479px;
+    display: block;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.teamInfoBlock {
+    display: none;
+    width: 100%;
+    height: 479px;
+    padding: 5px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: #2A0001;
+}
+
+.teamCardInteractive.is-info-visible .teamImageBlock {
+    display: none;
+}
+
+.teamCardInteractive.is-info-visible .teamInfoBlock {
+    display: flex;
+}
+
+.teamName {
+    width: 100%;
+    text-align: center;
+    color: #CDE329;
+}
+
+.teamInfo {
+    width: 100%;
+    text-align: left;
+    color: #CDE329;
+}
+
+.new_guests_section {
+    gap: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: var(--color-bg-card);
+}
+
+.buttonActualSchedule {
+    background-color: var(--color-bg-button);
+    color: var(--color-button-alt);
+}
+
+.buttonActualSchedule:active {
+    color: var(--color-button-hover);
+}
+
+.scrollbar {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+}
+
+.scrollbar::-webkit-scrollbar {
+    height: 0px;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+    background-color: var(--color-bg);
+    border-radius: 999px;
+}
+
+.scrollbarContent {
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+    min-width: 100%;
+    padding: 0;
+}
+
+.at_cinema_section {
+    gap: 16px;
+    padding: 16px 0 24px;
+}
+
+.at_cinema_section > h2 {
+    width: 100%;
+    text-align: center;
+    gap: 10px;
+}
+
+.filmCards {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5px;
+
+    background-color: #2A0001;
+}
+
+.filmCardInteractive {
+    width: 360px;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    position: relative;
+    touch-action: manipulation;
+}
+
+.filmPosterCard {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.filmPoster {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.filmInfo {
+    display: none;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.filmCardInteractive.is-info-visible .filmPosterCard {
+    display: none;
+}
+
+.filmCardInteractive.is-info-visible .filmInfo {
+    display: flex;
+}
+
+.filmName {
+    width: 100%;
+    text-align: center;
+}
+
+.filmInfo .smallText,
+.filmInfo .mainText {
+    text-align: left;
+    color: #CDE329;
+}
+
+.filmInfo .buttonBuy {
+    align-self: center;
+}
+
+.empty {
+    flex-shrink: 0;
+}
+
+.card {
+    flex-shrink: 0;
+    background-color: #000000;
+}
+
+.info_section {
+    gap: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: var(--color-accent);
+}
+
+.footer_section {
+    gap: 10px;
+    text-align: center;
+}
+
+.graphics {
+    Color: #CDE329;
+}
+
+.contacts {
+    Color: #CDE329;
+}
+
+@media (min-width: 360px) {
+    .logo_image {
+        width: 84.16%;
+        height: 78px;
+    }
+
+    .menu {
+        height: 78px;
+    }
+
+    .menuLinkNow {
+        width: 70px;
+        height: 10px;
+    }
+
+    .menuLink {
+        width: 70px;
+        height: 10px;
+    }
+
+    .buy {
+        width: 100%;
+        height: 39px;
+    }
+
+    .buttonBuy {
+        width: 135px;
+        height: 25px;
+    }
+
+    .buttonSchedule {
+        width: 192px;
+        height: 39.4px;
+    }
+
+    .whyTittle {
+    width: 245px;
+    height: auto; 
+    }
+
+    .empty {
+    width: 60px;
+    height: 275;
+    }
+
+    .card {
+        width: 240px;
+        height: 269px;
+        gap: 10px;
+        background-color: #000000;
+    }
+
+    .poster {
+        width: 240px;
+        height: 141px;
+    }
+
+    .buttonActualSchedule {
+        width: 215px;
+        height: 53px;
+    }
+}
+
+@media (min-width: 375px) {
+    .logo_image {
+        width: 375px;
+        height: 95px;
+    }
+
+    .menu {
+        height: 95px;
+    }
+
+    .menuLinkNow {
+        width: 70px;
+        height: 10px;
+    }
+
+    .menuLink {
+        width: 70px;
+        height: 10px;
+    }
+
+    .buy {
+        width: 100%;
+        height: 45px;
+    }
+
+    .buttonBuy {
+        width: 135px;
+        height: 25px;
+    }
+
+    .buttonSchedule {
+        width: 200px;
+        height: 41px;
+    }
+    
+    .whyTittle {
+    width: 261px;
+    height: auto; 
+    }
+
+    .empty {
+    width: 62.5px;
+    height: 259;
+    }
+
+    .card {
+        width: 250px;
+        height: 275;
+        gap: 10px;
+    }
+
+    .poster {
+        width: 250px;
+        height: 147px;
+    }
+    
+    .buttonActualSchedule {
+        width: 215px;
+        height: 45px;
+    }
+}
+
+@media (min-width: 414px) {
+    .logo_image {
+        width: 360px;
+        height: 80.5px;
+    }
+
+    .menu {
+        height: 80.5px;
+    }
+
+    .menuLinkNow {
+        width: 80px;
+        height: 15px;
+    }
+
+    .menuLink {
+        width: 80px;
+        height: 15px;
+    }
+
+    .buy {
+        width: 100%;
+        height: 40.25px;
+    }
+
+    .buttonBuy {
+        width: 140px;
+        height: 23px;
+    }
+
+    .buttonSchedule {
+        width: 220.7px;
+        height: 56px;
+    }
+
+    .whyTittle {
+    width: 283px;
+    height: auto; 
+    }
+
+    .empty {
+    width: 69px;
+    height: 294;
+    }
+
+    .card {
+        width: 275px;
+        height: 294;
+        gap: 10px;
+    }
+
+    .poster {
+        width: 276px;
+        height: 162px;
+    }
+    
+    .buttonActualSchedule {
+        width: 246.7px;
+        height: 45px;
+    }
+}

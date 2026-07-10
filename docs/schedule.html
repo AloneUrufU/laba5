@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeCinema</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images\logo\HomeCinema-logo-transparent.png" alt="HomeCinema Logo" class="logo_image">
+        </div>
+
+        <div class="menu">
+            <div class="menuNav">
+                <div class="row1">
+                    <a href="index.html" class="menuLink"><p class="mainText">Головна</p></a>
+                    <a href="#" class="menuLinkNow"><p class="mainText">Розклад</p></a>
+                </div>
+
+                <div class="row2">
+                    <a href="about.html" class="menuLink"><p class="mainText">Про нас</p></a>
+                </div>
+            </div>
+
+            <div class="search+buy">
+                <div class="buy">
+                    <button type="button" class="buttonBuy"><p class="buttonText">Купити квиток</p></button>
+                </div>
+
+                <div class="search">
+                    <div class="searchBar">
+                        <input type="text" class="searchInput" placeholder="Пошук">
+                        <button type="submit" class="searchButton"><img src="images\icons\поиск.png" alt="Search Icon" class="searchIcon"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero_section">
+        <h1 class="heroTittle">Розклад сеансів</h1>
+
+        <p class="subTittle">Актуальний розклад на сьогодні та найближчі дні</p>
+    </section>
+
+    <section class="schedule_section">
+        <div class="filmCards">
+            <div class="filmCardInteractive">
+                <div class="filmPosterCard">
+                    <img src="images/заставки/Аватар1.jfif" alt="poster" class="filmPoster">
+                </div>
+
+                <div class="filmInfo">
+                    <p class="filmName">Назва: Аватар</p>
+                    <p class="smallText">Жанри: Наукова фантастика, Бойовик, Пригоди, Драма</p>
+                    <p class="smallText">Часи сеансів:<br>
+                        10:00 – 12:00 — Ранковий сеанс<br>
+                        13:00 – 15:00 — Денний сеанс<br>
+                        16:30 – 18:30 — Вечірній сеанс<br>
+                        19:30 – 21:30 — Пізній сеанс</p>
+                    <p class="mainText">На далекій планеті Пандора людство знайшло рідкісний ресурс — уніваніум. Паралізований морський піхотинець Джейк Саллі бере участь у програмі «Аватар» і потрапляє у тіло гібрида людини й місцевого на'ві.</p>
+
+                    <button type="button" class="buttonBuy"><p class="buttonText">Купити квиток</p></button>
+                </div>
+            </div>
+
+            <div class="filmCardInteractive">
+                <div class="filmPosterCard">
+                    <img src="images/заставки/01d17e9e575527b9d8e6346d77af9b4e.jpg" alt="poster" class="filmPoster">
+                </div>
+
+                <div class="filmInfo">
+                    <p class="filmName">Назва: Аватар 2</p>
+                    <p class="smallText">Жанри: Наукова фантастика, Бойовик, Пригоди, Драма</p>
+                    <p class="smallText">Часи сеансів:<br>
+                        11:00 – 14:00 — Перший показ<br>
+                        14:45 – 17:45 — Другий показ<br>
+                        18:30 – 21:30 — Головний вечірній показ</p>
+                    <p class="mainText">Минуло понад десять років. Джейк Саллі та Нейтірі живуть щасливим сімейним життям серед на'ві на Пандорі, а їхня родина змушена тікати до океанського племені меткайна.</p>
+
+                    <button type="button" class="buttonBuy"><p class="buttonText">Купити квиток</p></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer_section">
+        <h2 class="footerTittle">Сучасний кінотеатр у Вознесенську</h2>
+
+        <div class="graphics">
+            <h3 class="graphicsTittle">Графік</h3>
+            <p class="mainText">Понеділок – Четвер:<br>
+                10:00 – 23:00<br>
+                П’ятниця – Неділя:<br>
+                09:00 – 01:00</p>
+        </div>
+
+        <div class="contacts">
+            <h3 class="contactsTittle">Контакти</h3>
+            <p class="mainText">Адреса:<br>
+                м. Вознесенськ, вул. Центральна, 15<br>
+                Телефон:<br>
+                +38 (051) 234-56-78<br>
+                Email:<br>
+                info@homecinema.ua</p>
+        </div>
+    </footer>
+
+    <script>
+        const scheduleFilmCards = document.querySelectorAll('.schedule_section .filmCardInteractive');
+
+        scheduleFilmCards.forEach((card) => {
+            let lastTap = 0;
+
+            const toggleFilmView = (event) => {
+                event.preventDefault();
+                card.classList.toggle('is-info-visible');
+            };
+
+            const handleDoubleTap = (event) => {
+                const now = Date.now();
+                if (now - lastTap < 300) {
+                    toggleFilmView(event);
+                }
+                lastTap = now;
+            };
+
+            card.addEventListener('dblclick', toggleFilmView);
+            card.addEventListener('touchend', handleDoubleTap);
+        });
+    </script>
+</body>
+</html>
